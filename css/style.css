@@ -1,0 +1,11 @@
+/* Put your CSS here */
+.imgcard {
+	border-radius: 6px;
+	background:#eee;
+	padding:16px;
+	margin:8px;
+}
+
+.compressedList{
+	-webkit-padding-start: 26px;
+}

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Ember Starter Kit</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+</head>
+<body>
+  <script type="text/x-handlebars">
+    <div class="container">
+      <div class="header" style="line-height: 24px;height: 48px;">
+        <ul class="nav nav-pills pull-right">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="text-muted" style="font-size: 1.5em;line-height: 42px;margin-left: 8px;">Adrian Meredith</div>
+      </div>
+
+      <div class="jumbotron">
+        <h1>Curiculum Vitae</h1>
+        <ul class="lead" style="font-size:1.2em;">
+          <li>7+ years software engineering experience</li>
+          <li>Unquenchable enthusiasm and a major driver for innovation</li>
+          <li>UI/UX specialist with significant experience in all areas</li>
+          <li>Personal contact with clients for gathering requirements, support and fulfilment</li>
+          <li>Agile (scrum) practices with test driven development</li>
+        </ul>
+        <p><a class="btn btn-lg btn-success" href="#" role="button">Get in touch</a></p>
+      </div>
+
+      {{outlet}}
+
+    </div>
+  </script>
+
+  <script type="text/x-handlebars" id="index">
+  {{#bootstrap-row}}
+    {{bootstrap-roundimgcard heading="About Me" src="images/me.jpg"}}
+    {{#bootstrap-imgcard circleImage="false" heading="Core Skills" src="http://www.w3.org/html/logo/downloads/HTML5_Logo_512.png"}}
+      <ul class="compressedList">
+          <li>
+           <b>UI/UX</b> HTML 5, Javascript, Jquery, Ember.js, Bootstrap.js, MVC, responsive design
+          </li>
+          <li>
+            <b>Java</b> JavaEE, Maven, Hibernate, Apache Lucene, REST, messaging
+          </li>
+          <li>
+           <b>Leadership and Communication</b> Training other development.
+          </li>
+      </ul>
+    {{/bootstrap-imgcard}}
+    {{#bootstrap-roundimgcard heading="Education" src="images/upp.jpg"}}
+      <ul>
+          <li>
+            <b>Uppingham School, Rutland</b> A Levels – Maths, Physics and Spanish
+          </li>
+          <li>
+           <b>Exeter University</b> BSc Honours Degree in Internet Computing
+          </li>
+          <li>
+           <b>Oracle Certified</b> Java Developer
+          </li>
+      </ul>
+    {{/bootstrap-roundimgcard}}
+  {{/bootstrap-row}}
+
+    <div id="para2">
+      <p style="font-weight:bold; text-decoration: underline">Education</p>
+      <p>
+        <ul >
+          <li><b>Uppingham School, Rutland</b>
+            A Levels – Maths, Physics and Spanish</li>
+            <li><b>Exeter University</b>
+              BSc Honours Degree in Internet Computing</li>
+            </ul>
+          </p>
+        </div>
+
+        <div>
+         <span class="para4">
+          <p style="font-weight:bold; text-decoration: underline">
+            Related Experience
+          </p>
+        </span>
+        <div>
+          <span class="para4">
+            <h4>Oct 06 – Present Envisional (GroupNBT)</h4>
+            Envisional provides the services, expertise and intellegence to protect a company's brand or online assets (piracy).  
+            Using a proprietary technology that identifies key information from various sources such as documents, images, emails etc.  
+            They provide the necessary skills to identify the threats to any business online;
+          </span>
+          <ul style="list-style: none">
+            <li class="para5">
+              <h4>Product Consultant</h4>
+            </li>
+            <li class="para5">
+              <ul>
+                <li>Developing, managing and supporting a bespoke iteration of the company's
+                  technology for a high value client.</li>
+                  <li>Frequent customer contact, including site visits.</li>
+                  <li>Mostly developing in C++ with some Java with a dash of perl+python.</li>
+                  <li>Moved the product into key new areas (Social networking, Ebay)</li>
+                </ul>
+              </li>
+              <li class="para6">
+                <h4>Backend Software Engineer</h4>
+              </li>
+              <li class="para6">
+                <ul>
+                  <li>Working with the legacy technology to improve stability and maintainability</li>
+                  <li>Modernised our build infrastructure towards more "Continuous Integration" via a program called hudson</li>
+                  <li>Played a key part in modernising various parts of the codebase (dashboard graphs, new admin user interface built with Google web toolkit, merging improvements from the bespoke version mentioned earlier and others)</li>
+                  <li>Mostly developing in C++ with some Java including web services (SOAP)</li>
+                  <li>Spent considerable time closing the gap in test coverage</li>
+                </ul>
+              </li>
+              <li class="para7">
+                <h4>New Product Interface Developer/Designer</h4>
+              </li>
+              <li class="para7">
+                <ul>
+                  <li>Pioneered the  and design of a new cutting edge user interface to visualise the data matched from the existing</li>
+                  <li>Utilising the latest web technologies (AJAX,css,jquery, Javaee 6) I have been a key part of redefining how customer and our own team of researches see and use the data our systems discover</li>
+                  <li>Produced a series of prototypes and ideas to promote future directions (before i even knew a new product was planned) and as a result our small team was able to go from concept to production in under 3 month despite never having used the technology framework before (javaserverfaces 2)</li>
+                  <li>Utilised various software engineering design patterns(e.g. Builder,Observer,Command,Visitor etc) to keep development velocity high</li>
+                  <li>Employed many modern ui techniques and designs (portal style dashboard, drag and drop, modal window, lazy loading and more)</li>
+                </ul>
+              </li>
+            </ul>
+            <span class="para8" >
+              <h4>Feb 06 – Aug 06 Sungard Vivista at Devon and Cornwall Police HQ</h4>
+            </span>
+            <ul style="list-style: none">
+              <li class="para9" >
+                <h4>Operations Analyst</h4>
+              </li>
+              <li class="para9" >
+                <ul>
+                  <li>Responsible of maintaining and supporting critical systems</li>
+                  <li>Taught myself how to use the Solaris operating system including the Bash scripting languange</li>
+                  <li>Automated many of the backups on the system</li>
+                </ul>
+              </li>
+            </ul>
+            <span class="para8" >
+              This cv was written using html,css and jquery.
+            </span>
+          </div>
+        </div>
+      </script>
+  
+  <!-- Ember Components -->
+
+  <!-- An bulletpoint list for noting key achievements and skills -->
+  <script id="components/cv-section" type="text/x-handlebars" >
+    <div id="para1">
+      <p style="font-weight:bold; text-decoration: underline">{{title}}</p>
+      <p>
+        <ul >
+          {{#each items}}
+          <li>{{this}}</li>
+          {{/each}}
+        </ul>
+      </p>
+    </div>
+  </script>
+  <script id="components/bootstrap-row" type="text/x-handlebars">
+    <div class="row" style="text-align:center;">
+      {{yield}}
+    </div>
+  </script>
+  <script id="components/bootstrap-roundimgcard" type="text/x-handlebars">
+    <div class="imgcard">
+      <img class="img-circle" src="{{unbound src}}" style="width: 140px; height: 140px;">
+      <h2>{{heading}}</h2>
+      <article style="text-align:justify;">{{yield}}</article>
+    </div>
+  </script>
+  <script id="components/bootstrap-imgcard" type="text/x-handlebars">
+    <div class="imgcard">
+      <img src="{{unbound src}}" style="width: 140px; height: 140px;">
+      <h2>{{heading}}</h2>
+      <article style="text-align:justify;">{{yield}}</article>
+    </div>
+  </script>
+      <script src="js/libs/jquery-1.10.2.js"></script>
+      <script src="js/libs/handlebars-1.1.2.js"></script>
+      <script src="js/libs/ember-1.5.1.js"></script>
+      <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+      <script src="js/app.js"></script>
+      <!-- to activate the test runner, add the "?test" query string parameter -->
+      <script src="tests/runner.js"></script>
+    </body>
+    </html>
