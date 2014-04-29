@@ -37,7 +37,7 @@
 
   <script type="text/x-handlebars" id="index">
   {{#bootstrap-row}}
-    {{#bootstrap-roundimgcard heading="About Me" flipsrc="images/me2.jpg" src="images/me.jpg"}}
+    {{#bootstrap-roundimgcard heading="About Me" src="images/me2.jpg" flipsrc="images/me.jpg"}}
       <ul class="compressedList">
           <li>
             <b>Living</b> in Cambridge.
@@ -47,7 +47,7 @@
           </li>
       </ul>
     {{/bootstrap-roundimgcard}}
-    {{#bootstrap-imgcard circleImage="false" heading="Core Skills" src="http://www.w3.org/html/logo/downloads/HTML5_Logo_512.png" flipsrc="http://ohdoylerules.com/content/images/css3.svg"}}
+    {{#bootstrap-doubleimgcard circleImage="false" heading="Core Skills" src="http://www.w3.org/html/logo/downloads/HTML5_Logo_512.png" flipsrc="http://ohdoylerules.com/content/images/css3.svg" src2="images/java.jpg" flipsrc2="images/mysql1.png"}}
       <ul class="compressedList">
           <li>
            <b>UI/UX</b> HTML 5, Javascript, Jquery, Ember.js, Bootstrap.js, MVC, responsive design
@@ -56,11 +56,11 @@
             <b>Java</b> JavaEE, Maven, Hibernate, Apache Lucene, REST, messaging
           </li>
           <li>
-           <b>Leadership and Communication</b> Training other development.
+           <b>Leadership</b> Training other development teams and running design discussions.
           </li>
       </ul>
-    {{/bootstrap-imgcard}}
-    {{#bootstrap-roundimgcard heading="Education" src="images/upp.jpg"}}
+    {{/bootstrap-doubleimgcard}}
+    {{#bootstrap-roundimgcard heading="Education" src="images/upp.jpg" flipsrc="images/old-books.jpg"}}
       <ul>
           <li>
             <b>Uppingham School, Rutland</b> A Levels – Maths, Physics and Spanish
@@ -70,6 +70,9 @@
           </li>
           <li>
            <b>Oracle Certified</b> Java Developer
+          </li>
+          <li>
+           <b>Self Motivated</b> to discover and learn new techniques and tools
           </li>
       </ul>
     {{/bootstrap-roundimgcard}}
@@ -180,23 +183,35 @@
     </div>
   </script>
   <script id="components/bootstrap-roundimgcard" type="text/x-handlebars">
-    <div class="imgcard">
+    <div class="imgcard flipContainer">
         <div class="flipcontainer">
-          <div class="hover panel">
-            <img class="front " src="{{unbound src}}" style="width: 140px; height: 140px;">
-            <img class="back" src="{{unbound flipsrc}}" style="width: 140px; height: 140px;">
+          <div class="hover flippanel">
+            <img class="front img-circle" src="{{unbound src}}" style="width: 140px; height: 140px;">
+            <img class="back img-circle" src="{{unbound flipsrc}}" style="width: 140px; height: 140px;">
           </div>
         </div>
       <h2>{{heading}}</h2>
       <article style="text-align:justify;">{{yield}}</article>
     </div>
   </script>
-  <script id="components/bootstrap-imgcard" type="text/x-handlebars">
-    <div class="imgcard">
-      <img src="{{unbound src}}" style="width: 140px; height: 140px;">
-      {{#if flipsrc}}
-        <img src="{{unbound flipsrc}}" style="width: 140px; height: 140px;">
-      {{/if}}
+  <script id="components/bootstrap-doubleimgcard" type="text/x-handlebars">
+    <div class="imgcard flipContainer">
+        <div class="flipcontainer">
+          <div class="hover flippanel double">
+            <div class="front">
+              <img src="{{unbound src}}" style="width: 140px; height: 140px;">
+              {{#if flipsrc}}
+                <img src="{{unbound flipsrc}}" style="width: 140px; height: 140px;">
+              {{/if}}
+            </div>
+            <div class="back">
+              <img src="{{unbound src2}}" style="width: 140px; height: 140px;">
+              {{#if flipsrc}}
+                <img src="{{unbound flipsrc2}}" style="width: 140px; height: 140px;">
+              {{/if}}
+            </div>
+          </div>
+        </div>
       <h2>{{heading}}</h2>
       <article style="text-align:justify;">{{yield}}</article>
     </div>

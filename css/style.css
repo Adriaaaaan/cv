@@ -3,7 +3,6 @@
 	border-radius: 6px;
 	background:#eee;
 	padding:16px;
-	margin:8px;
 }
 
 .compressedList{
@@ -14,7 +13,11 @@ body {
 	padding:8px;
 }
 
-.panel {
+.flippanel.double {
+	width: 330px;
+}
+
+.flippanel {
 		width: 140px;
 		height: 140px;
 		margin: 0 auto;
@@ -28,7 +31,7 @@ body {
 	}
 	/* -- make sure to declare a default for every property that you want animated -- */
 	/* -- general styles, including Y axis rotation -- */
-	.panel .front {
+	.flippanel .front {
 		float: none;
 		position: absolute;
 		top: 0;
@@ -55,7 +58,7 @@ body {
 		-webkit-transition: all .4s ease-in-out;
 		transition: all .4s ease-in-out;
 	}
-	.panel:hover .front {
+	.flipContainer:hover .front {
 		z-index: 900;
 		background: #eee;
 
@@ -64,7 +67,7 @@ body {
 		transform: rotateY(180deg);
 	}
 
-	.panel .back {
+	.flippanel .back {
 		float: none;
 		position: absolute;
 		top: 0;
@@ -90,7 +93,7 @@ body {
 						transition: all .4s ease-in-out;
 	}
 
-	.panel:hover .back {
+	.flipContainer:hover .back {
 		z-index: 1000;
 		-webkit-transform: rotateX(0deg) rotateY(0deg);
 		-moz-transform: rotateX(0deg) rotateY(0deg);

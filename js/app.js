@@ -17,3 +17,7 @@ App.IndexRoute = Ember.Route.extend({
   App.BootstrapRoundimgcardComponent = App.BootstrapImgcardComponent.extend({
     classNames:['col-lg-4']
   });
+
+    App.BootstrapDoubleimgcardComponent = App.BootstrapImgcardComponent.extend({
+    classNames:['col-lg-4']
+  });
