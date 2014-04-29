@@ -11,25 +11,23 @@
 <body>
   <script type="text/x-handlebars">
     <div class="container">
-      <div class="header" style="line-height: 24px;height: 48px;">
+      <div class="header" style="height: 48px;">
         <ul class="nav nav-pills pull-right">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
+          <li class="active"><a href="mailto:elhobito@gmail.com">Contact</a></li>
         </ul>
         <div class="text-muted" style="font-size: 1.5em;line-height: 42px;margin-left: 8px;">Adrian Meredith</div>
-      </div>
+      </div> 
 
       <div class="jumbotron">
         <h1>Curiculum Vitae</h1>
         <ul class="lead" style="font-size:1.2em;">
           <li>7+ years software engineering experience</li>
           <li>Unquenchable enthusiasm and a major driver for innovation</li>
-          <li>UI/UX specialist with significant experience in all areas</li>
+          <li>UI/UX specialist with experience across all areas from large databases all the way to the end user</li>
           <li>Personal contact with clients for gathering requirements, support and fulfilment</li>
           <li>Agile (scrum) practices with test driven development</li>
         </ul>
-        <p><a class="btn btn-lg btn-success" href="#" role="button">Get in touch</a></p>
+        <p><a class="btn btn-lg btn-success" href="mailto:elhobito@gmail.com" role="button">Get in touch</a></p>
       </div>
 
       {{outlet}}
@@ -39,8 +37,17 @@
 
   <script type="text/x-handlebars" id="index">
   {{#bootstrap-row}}
-    {{bootstrap-roundimgcard heading="About Me" src="images/me.jpg"}}
-    {{#bootstrap-imgcard circleImage="false" heading="Core Skills" src="http://www.w3.org/html/logo/downloads/HTML5_Logo_512.png"}}
+    {{#bootstrap-roundimgcard heading="About Me" flipsrc="images/me2.jpg" src="images/me.jpg"}}
+      <ul class="compressedList">
+          <li>
+            <b>Living</b> in Cambridge.
+          </li>
+          <li>
+             <b>Hobbies</b> include playing the guitar (Including several live performances), photography and learning martial arts.
+          </li>
+      </ul>
+    {{/bootstrap-roundimgcard}}
+    {{#bootstrap-imgcard circleImage="false" heading="Core Skills" src="http://www.w3.org/html/logo/downloads/HTML5_Logo_512.png" flipsrc="http://ohdoylerules.com/content/images/css3.svg"}}
       <ul class="compressedList">
           <li>
            <b>UI/UX</b> HTML 5, Javascript, Jquery, Ember.js, Bootstrap.js, MVC, responsive design
@@ -154,7 +161,6 @@
       </script>
   
   <!-- Ember Components -->
-
   <!-- An bulletpoint list for noting key achievements and skills -->
   <script id="components/cv-section" type="text/x-handlebars" >
     <div id="para1">
@@ -175,7 +181,12 @@
   </script>
   <script id="components/bootstrap-roundimgcard" type="text/x-handlebars">
     <div class="imgcard">
-      <img class="img-circle" src="{{unbound src}}" style="width: 140px; height: 140px;">
+        <div class="flipcontainer">
+          <div class="hover panel">
+            <img class="front " src="{{unbound src}}" style="width: 140px; height: 140px;">
+            <img class="back" src="{{unbound flipsrc}}" style="width: 140px; height: 140px;">
+          </div>
+        </div>
       <h2>{{heading}}</h2>
       <article style="text-align:justify;">{{yield}}</article>
     </div>
@@ -183,6 +194,9 @@
   <script id="components/bootstrap-imgcard" type="text/x-handlebars">
     <div class="imgcard">
       <img src="{{unbound src}}" style="width: 140px; height: 140px;">
+      {{#if flipsrc}}
+        <img src="{{unbound flipsrc}}" style="width: 140px; height: 140px;">
+      {{/if}}
       <h2>{{heading}}</h2>
       <article style="text-align:justify;">{{yield}}</article>
     </div>
