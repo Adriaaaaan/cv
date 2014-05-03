@@ -35,6 +35,11 @@ Components
 /***
 models
 ****/
+App.EmailRecepient = Ember.Object.extend({
+	name:null,
+	email:null,
+	type:null
+});
 App.EmailMessage = Ember.Object.extend({
 	from_email:null,
 	to:[App.EmailRecepient.create({email:App.emailAddress})],
