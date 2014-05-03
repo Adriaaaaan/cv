@@ -38,7 +38,7 @@ models
 App.EmailMessage = Ember.Object.extend({
 	from_email:null,
 	to:[App.EmailRecepient.create({email:App.emailAddress})],
-	autotext:null.
+	autotext:null,
 	subject:null,
 	html:null
 });
@@ -49,7 +49,7 @@ application
 
 App.ModalWindow = Ember.View.extend({
 	classNames:['modalwindow'],
-	classNameBindings:[visible:showWindow:hideWindow],
+	classNameBindings:['visible:showWindow:hideWindow'],
 	layoutName:'modalWindow',
 	visible:null,
 	onSuccess:function(){},
